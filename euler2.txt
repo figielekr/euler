@@ -1,0 +1,22 @@
+public class MyClass {
+    public static void main(String args[]) {
+      int a=0, b=0;
+      long tab[] = new long[100];
+      tab[0]=0;
+      tab[1]=1;
+      int suma=0;
+        
+        for(int i=2; i<150 ; i++){    
+          tab[i]=tab[i-1]+tab[i-2];
+          if(tab[i]%2==0)
+          suma+=tab[i];
+         
+          
+          if(tab[i]>4000000)
+          break;
+          
+
+      }
+      System.out.println("Suma licz parzystych wynosi: "+suma);
+    }
+}
