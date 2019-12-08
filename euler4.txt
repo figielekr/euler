@@ -1,0 +1,30 @@
+public class euler4 {
+    public static void main(String[] args) {
+        int liczba1 = 999, liczba2 = 999, a = 0;
+        for (int i = 999; liczba1 >= 700; i--) {
+            int wynik;
+            wynik = liczba1 * liczba2;
+            liczba2 = 999;
+            for (int j = 999; liczba2 >= 200; j--) {
+                wynik = liczba1 * liczba2;
+                //System.out.println(liczba1+" "+liczba2);
+                liczba2--;
+
+                String nowa = Integer.toString(wynik);
+                if (nowa.charAt(0) == nowa.charAt(5) && nowa.charAt(1) == nowa.charAt(4) && nowa.charAt(2) == nowa.charAt(3)) {
+                    //System.out.println(nowa);
+                    int tymczasowa = Integer.parseInt(nowa);
+                    if (a<tymczasowa){
+                        a=tymczasowa;
+
+                    }
+                }
+
+
+
+            }
+            liczba1 -= 1;
+        }
+        System.out.println(a);
+    }
+}
