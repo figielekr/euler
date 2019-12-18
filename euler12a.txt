@@ -1,0 +1,46 @@
+public class triangle {
+    public static void main(String[] args) {
+        int triangle[] = new int[50002];
+        int tab[] = new int[5002];
+        int dzielnik=2;
+        long jakduzo=1;
+        triangle[0]=1;
+        int counter=0;
+        int chwilowa=540;
+
+        for (int k = 1; k <= 30; k++) {                    //wyznacza nastepne elementy ciagu
+            triangle[k] = ((k + 1) * k) / 2;
+            System.out.println("Liczba ciągu numer: "+k+" o wartości: "+triangle[k]);
+        }
+
+        for (int i =30; i<=100; i++){              //liczy dzielniki
+            //System.out.println("Pętla dzielników numer: "+i+" wartość triangle: "+chwilowa);
+            if(chwilowa%dzielnik==0)
+            {chwilowa = chwilowa / dzielnik;
+                tab[dzielnik]++;
+                System.out.println("If w pętli numer: "+i+" liczba wynosi: " +chwilowa+ " dzielnik: " +dzielnik);
+            }
+            else if (chwilowa!=0 && chwilowa != 1)
+            {dzielnik++;}
+            // if (triangle[i]==1)
+            // {break;}
+
+        }
+        if (chwilowa==1){
+
+            for (int j = 1; j<=dzielnik; j++){
+                jakduzo=jakduzo*(tab[j]+1);
+                counter++;
+                System.out.println("Numer: "+counter+" Jakduzo: "+jakduzo+". Dzielnik wynosi: "+dzielnik);}
+        }
+
+
+
+
+        System.out.println(jakduzo);
+
+
+    }
+}
+
+
