@@ -1,0 +1,37 @@
+public class euler {
+    public static void main(String[] args) {
+        int triangle[] = new int[500];
+        int tab[] = new int[500];
+        triangle[1] = 1;
+        int dzielnik = 2;
+        int jakduzo = 1;
+        int counter = 0;
+
+        for (int k = 1; k <= 40; k++) {                    //wyznacza nastepne elementy ciagu
+            triangle[k] = ((k + 1) * k) / 2;
+            System.out.println("Liczba ciągu numer: " + k + " o wartości: " + triangle[k]);
+        }
+        for (int i = 29; i <= 40; i++) {              //liczy dzielniki
+            //System.out.println("Pętla dzielników numer: "+i+" wartość triangle: "+chwilowa);
+            dzielnik = 2;
+            for (; ; ) {
+                if (triangle[i] % dzielnik == 0)
+                    {System.out.println("If w pętli numer: " + i + " liczba wynosi: " + triangle[i] + " dzielnik: " + dzielnik);
+                    triangle[i] = triangle[i] / dzielnik;
+                    tab[dzielnik]++;
+                    }
+
+                    else if (triangle[i] != 0 && triangle[i] != 1) {
+                        dzielnik++;
+                    } else if (triangle[i] == 1)
+                        {break;}
+
+                //System.out.println(triangle[i]);
+            }
+        }
+        //System.out.println(jakduzo);
+
+
+    }
+}
+
