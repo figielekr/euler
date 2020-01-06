@@ -1,0 +1,49 @@
+public class ueler {
+    public static void main(String[] args) {
+        int triangle[] = new int[500_002];
+        int tab[] = new int[500_002];
+        int dzielnik = 2;
+        long jakduzo = 1;
+        triangle[0] = 1;
+        int counter = 0;
+       // int chwilowa = 540;
+        int liczba;
+
+        for (int k = 1; k <= 500_000; k++) {                    //wyznacza nastepne elementy ciagu
+            triangle[k] = ((k + 1) * k) / 2;
+            //System.out.println("Liczba ciągu numer: " + k + " o wartości: " + triangle[k]);
+        }
+
+        for (int i = 34; i <= 500_000; i++) {//liczy dzielniki
+            liczba = triangle[i];
+            jakduzo=1;
+            for (int t = 0; t<=dzielnik ; t++){
+                tab[t]=0;
+            }
+            dzielnik = 2;
+            while (liczba != 1) {
+                if (liczba % dzielnik == 0) {
+                    liczba = liczba / dzielnik;
+                    tab[dzielnik]++;
+                } else
+                    dzielnik++;
+            }
+                for (int j = 1; j <= dzielnik; j++) {
+                    jakduzo = jakduzo * (tab[j] + 1);
+  //                  counter++;
+   //                 System.out.println("Numer: " + counter + " Jakduzo: " + jakduzo + ". Dzielnik wynosi: " + dzielnik);
+                }
+                if (jakduzo>500){
+                    System.out.println(triangle[i] + " " + jakduzo + " " + i);
+                    break;
+                }
+            }
+
+
+            //System.out.println(jakduzo);
+
+
+        }
+    }
+
+
