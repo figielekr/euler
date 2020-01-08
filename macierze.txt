@@ -1,0 +1,52 @@
+public class ueler {
+    public static void main(String[] args) {
+            int[][] tab = new int [2] [3];
+            int[][] tab2 = new int [3] [3];
+            int liczba1 = 0, liczba2 = 0;
+        for (int i=0; i<tab.length; i++ ) {
+            int [] tablica = tab[i];
+            for (int j=0; j < tablica.length; j++){
+                tab[i][j] = (i+j)*7+j+1;
+                System.out.print(tab[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        for (int i=0; i<tab2.length; i++ ) {
+            int [] tablica2 = tab2[i];
+            for (int j=0; j < tablica2.length; j++){
+                tab2[i][j] = (i+j)*7+j+6;
+                System.out.print(tab2[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+       // System.out.println(tab.length+" "+tab[1].length);
+       // System.out.println(tab2.length+" "+tab2[1].length);
+
+        if (tab[1].length==tab2.length){
+            System.out.println("Mnożenie wykonalne");
+            int[][] tab3 = new int [tab.length] [tab2[0].length];
+            for (int i=0; i<tab3.length; i++ ) {
+                int [] tablica3 = tab3[i];
+                for (int j=0; j < tab2[0].length; j++){
+                    for (int k=0; k<tab2[i].length; k++){
+                        tab3[i][j] =  tab3[i][j] + (tab[i][k]*tab2[k][j]);
+                    }
+
+
+                    System.out.print(tab3[i][j]+" ");
+                }
+                System.out.println();
+            }
+        }
+        else {
+            System.out.println("Mnożenie niemożliwe");
+        }
+     //   System.out.println(tab2[2].length);
+
+    }
+}
+
+
