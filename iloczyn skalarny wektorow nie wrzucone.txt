@@ -1,0 +1,39 @@
+public class ueler {
+    public static void main(String[] args) {
+            int[] a = new int[2];
+            int[] b = new int[2];
+            int[] c = new int[2];
+            a[0] = 2;
+            a[1] = -1;
+
+            b[0] = 4;
+            b[1] = 2;
+
+            c[0] = 1;
+            c[1] = 5;
+
+            //wyznacz wektory
+            int[] wektorAB = new int[2];
+            int wektorsuma = 0;
+            int[] wektorAC = new int[2];
+            int[] iloczyn = new int[2];
+            double iloczyn1 = 0;
+            double cos = 1;
+            int x = 0;
+            double xx=0;
+
+            for (int i = 0; i<wektorAB.length; i++){
+                wektorAB[i] = b[i]-a[i];
+                wektorAC[i] = c[i]-a[i];
+                iloczyn[i] = wektorAB[i]*wektorAC[i];
+                iloczyn1=iloczyn1+iloczyn[i];
+            }
+            x = (wektorAB[0]*wektorAB[0]+wektorAB[1]*wektorAB[1])*(wektorAC[0]*wektorAC[0]+wektorAC[1]*wektorAC[1]);
+        //System.out.println(wektorAB[0]+" "+wektorAB[1]+" "+wektorAC[0]+ " "+ wektorAC[1]);
+        xx = x;
+        cos = iloczyn1/Math.sqrt(xx);
+        System.out.println("Wartość cosinusa wynosi: "+cos);
+    }
+}
+
+
