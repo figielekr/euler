@@ -32,7 +32,7 @@ public class ueler {
         //System.out.println(wektorAB[0]+" "+wektorAB[1]+" "+wektorAC[0]+ " "+ wektorAC[1]);
         xx = x;
         cos = iloczyn1/Math.sqrt(xx);
-        System.out.println(cos);
+        System.out.println("Wartość cosinusa wynosi: "+cos);
     }
 }
 
