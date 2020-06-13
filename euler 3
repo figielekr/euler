@@ -1,0 +1,20 @@
+public class euler {
+
+
+    public static void main(String[] args) {
+
+         //euler result = new euler();
+        System.out.println(divisors(600851475143L ));
+
+    }
+    static long divisors(long a) {
+        long divider=0;
+        for (long i=1; i<=Math.sqrt(a); i+=2){
+            if (a%i==0 && i%2!=0 ){
+                divider = i;
+                System.out.println(divider);
+            }
+        }
+        return divider;
+    }
+}
