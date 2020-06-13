@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+
+public class euler {
+
+
+    public static void main(String[] args) {
+        int prime = 10_001;
+        System.out.println("Wyliczanie liczby pierwszej numer: " + prime+" ");
+        System.out.print("Liczba pierwsza numer: "+prime+" to: "+PrimeNumbers(prime));
+
+
+    }
+    static int PrimeNumbers(int a) {
+        ArrayList<Integer> PrimeList = new ArrayList<Integer>();
+        int counter=0;
+        int prime=0;
+        for(int i=2;; i++){
+            if (isPrime(i)){
+                counter++;
+                //System.out.println("Liczba pierwsza numer: "+counter+" o wartości: "+ i);
+                if (counter==a){
+                    prime=i;
+                    //System.out.println(i);
+                    break;
+                }
+                //System.out.println(PrimeList.get(i));
+            }
+        }
+        return prime;
+    }
+
+    static boolean isPrime(int x){
+        int counter=0;
+        for (double j=2; j<x ; j++){
+            if (x%j==0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
